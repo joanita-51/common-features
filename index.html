@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js">
-        $(document).ready( function () {
-            $("#table_id").DataTable();
-        } );
-    </script> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+ 
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    
+
     <title>Document</title>
 </head>
 
@@ -70,37 +69,44 @@
         <h1 class="font-extrabold text-2xl tracking-wide">FREQUENT VISITORS</h1>
         <p class="bg-[#EB1D36] h-1 w-20 my-10"></p>
     </div>
+    <div class="mx-10 mb-5">
+        <table id="table_id" class="display table-fixed">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Year</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Joanita </td>
+                    <td>Nakityo</td>
+                    <td>2018</td>
+                    <td>Uganda</td>
+                </tr>
+                <tr>
+                    <td>Angella</td>
+                    <td>Nabakooza</td>
+                    <td>2020</td>
+                    <td>Nairobi</td>
+                </tr>
+                <tr>
+                    <td>Agatha</td>
+                    <td>Namuwolya</td>
+                    <td>2021</td>
+                    <td>Kigali</td>
+                </tr>
+            </tbody>
+        </table>   
+    </div>
 
-    <table class="border-solid border-2 border-indigo-600 w-11/12 mb-11 mx-11">
-        <thead>
-          <tr class="border-solid border-2 border-indigo-600">
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Year</th>
-            <th>Country</th>
-            
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="border-solid border-2 border-indigo-600">
-            <td>Joanita </td>
-            <td>Nakityo</td>
-            <td>2018</td>
-            <td>Uganda</td>
-          </tr>
-          <tr class="border-solid border-2 border-indigo-600">
-            <td>Angella</td>
-            <td>Nabakooza</td>
-            <td>2020</td>
-            <td>Nairobi</td>
-          </tr>
-          <tr>
-            <td>Agatha</td>
-            <td>Namuwolya</td>
-            <td>2021</td>
-            <td>Kigali</td>
-          </tr>
-        </tbody>
-    </table>
+
+    <script>
+        $(document).ready( function () {
+            $("#table_id").DataTable();
+        } );
+    </script>
 </body>
 </html>
